@@ -7,7 +7,7 @@ import './BottomNav.css';
 const BottomNav = () => {
   return (
     <div className='bottom-nav'>
-      <Link to='/'>
+      <Link to='/home'>
         <FontAwesomeIcon icon={faHome} />
       </Link>
       <Link to='/explore'>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Post from '../Post/Post';
+import Stories from '../Stories/Stories';
 
 
 const Feed = () => {
@@ -23,17 +24,34 @@ const Feed = () => {
       username: 'user3',
       imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfL6RAv8oqwYSg2l6I4lm0tW-spfLdmgQKSg&s',
       caption: 'At the club!',
-      likes: 150,
+      likes: 70,
+    },
+    {
+      id: 4,
+      username: 'user4',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfL6RAv8oqwYSg2l6I4lm0tW-spfLdmgQKSg&s',
+      caption: 'At the Restaurant!',
+      likes: 30,
+    },
+    {
+      id: 5,
+      username: 'user5',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfL6RAv8oqwYSg2l6I4lm0tW-spfLdmgQKSg&s',
+      caption: 'At the bar!',
+      likes: 100,
     },
     // More posts can be added here
   ];
   
   return (
-    <div className='feed'>
-      {posts.map((post) => (
-        <Post key={post.id} postData={post} />
-      ))}
-    </div>
+    <div className="feed">
+    <Stories />
+    {posts && posts.length > 0 ? (
+      posts.map((post) => <Post key={post.id} postData={post} />)
+    ) : (
+      <p>No posts available</p>  // Fallback message if no posts are available
+    )}
+  </div>
   )
 }
 
