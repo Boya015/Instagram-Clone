@@ -1,4 +1,18 @@
 const Post = require('../models/User');
+const multer = require('multer');
+
+
+// Set up multer for file upload
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+      cb(null, 'uploads/');
+  },
+  filename: (req, file, cb) => {
+      cb(null, Date.now() + '-' + file.originalname);
+  }
+});
+
+const upload = multer({ storage });
 
 const createPost = async (req, res) => {
   try {
@@ -12,6 +26,7 @@ const createPost = async (req, res) => {
 
     // Get file path from the request
     const imagePath = req.file.path;
+
 
     // Create a new post object
     const newPost = new Post({

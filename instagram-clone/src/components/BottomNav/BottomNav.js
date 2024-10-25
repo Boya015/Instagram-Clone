@@ -4,9 +4,9 @@ import { faHome, faSearch, faVideo, faUser } from '@fortawesome/free-solid-svg-i
 import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 import './BottomNav.css';
 
-const BottomNav = () => {
+const BottomNav = ({ className }) => {
   return (
-    <div className='bottom-nav'>
+    <div className="bottom-nav">
       <Link to='/home'>
         <FontAwesomeIcon icon={faHome} />
       </Link>

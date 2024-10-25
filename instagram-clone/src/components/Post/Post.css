@@ -3,11 +3,11 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 15px;
-  border: 1px solid #dbdbdb;
   background-color: #fff;
   margin-bottom: 20px;
-  border-radius: 8px;
+  border-top: 1px solid #dbdbdb;   /* 1px black border on top */
 }
+
 
 .post > img {
   width: 100%;

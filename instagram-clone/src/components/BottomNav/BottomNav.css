@@ -1,3 +1,4 @@
+
 .bottom-nav {
     position: fixed;
     bottom: 0;
@@ -18,4 +19,10 @@
   .bottom-nav a:hover {
     color: gray; /* Change color on hover */
     cursor: pointer; /* Ensure pointer cursor on hover */
+  }
+
+  @media (min-width:600px) {
+    .bottom-nav {
+      display: none;
+    }
   }

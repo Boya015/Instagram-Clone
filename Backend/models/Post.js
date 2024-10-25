@@ -4,15 +4,15 @@ const PostSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
-    required: true,
+    required: false,
   },
   description: {
     type: String,
-    required: true,
+    required: false,
   },
   image: {
     type: String,
-    required: true, // This will store the path to the uploaded image
+    required: false, // This will store the path to the uploaded image
   },
   createdAt: {
     type: Date,

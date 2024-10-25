@@ -3,16 +3,14 @@ const userRoutes = require('./routes/userRoutes');  // Adjust path as needed
 const postRoutes = require('./routes/postRoutes');
 const mongoose = require('mongoose');
 const app = express();
+const multer = require('multer');
 const dotenv = require('dotenv').config();
 // Middleware to parse JSON requests
 app.use(express.json());
 
 // MongoDB connection
 mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected"))
   .catch((error) => console.log(error));
 
