@@ -15,5 +15,12 @@ nav ul {
   }
 
   .li {
+
     margin-bottom: 30px;
+  }
+
+ .leftside-bar a {
+    color: black; /* Set link color to black */
+    text-decoration: none; /* Remove underline from links */
+    cursor: pointer;
   }

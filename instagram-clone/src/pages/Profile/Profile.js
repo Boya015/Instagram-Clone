@@ -2,6 +2,8 @@ import React from 'react';
 import './Profile.css';
 import Header from '../../components/Header/Header';
 import BottomNav from '../../components/BottomNav/BottomNav';
+import LeftSidebar from '../../components/LeftSideBar/LeftSideBar';
+import RightSidebar from '../../components/RightSideBar/RightSideBar';
 
 const Profile = () => {
   const user = {
@@ -18,7 +20,9 @@ const Profile = () => {
 
   return (
     <>
-    <Header />
+    <Header /> 
+    <div className='container'>
+    <LeftSidebar className="leftside-bar"/>
     <div className="profile-container">
       <div className="profile-header">
         <img src={user.profilePic} alt="profile-pic" className="profile-pic" />
@@ -33,7 +37,10 @@ const Profile = () => {
         ))}
       </div>
     </div>
+    <RightSidebar className="rightside-bar"/>
     <BottomNav />
+    </div>
+    
     </>
   );
 };
