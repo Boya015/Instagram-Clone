@@ -2,7 +2,7 @@
 .feed {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto;
+    margin-left: 260px;
   }
   
   /* Post.css */
@@ -14,7 +14,7 @@
     border: 1px solid #dbdbdb;
     background-color: #fff;
     margin-bottom: 20px;
-    border-radius: 8px; /
+    border-radius: 8px;
   }
   
   .post img {
@@ -29,5 +29,12 @@
   
   .post p {
     color: #333;
+  }
+
+  @media (max-width:600px) {
+    .feed {
+      margin: 0;
+      padding: 0;
+    }
   }
   

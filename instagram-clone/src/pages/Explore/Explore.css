@@ -1,13 +1,23 @@
 .explore-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
-  grid-template-rows: repeat(2, 1fr); /* 2 equal rows */
+  grid-template-columns: repeat(3, 1fr); /* 2 equal columns */
+  grid-template-rows: repeat(3, 1fr); /* 2 equal rows */
   grid-gap: 10px;
-  padding: 20px;
+  margin-right: 50px;
+  margin-left: 280px;
 }
 
 .explore-image {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .explore-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+   grid-template-rows: repeat(2, 1fr); /* 2 equal rows */
+   padding-left: 30px;
+   margin: 0;
+  }
 }

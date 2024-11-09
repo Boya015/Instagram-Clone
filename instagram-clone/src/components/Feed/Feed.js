@@ -1,6 +1,7 @@
 import React from 'react';
 import Post from '../Post/Post';
 import Stories from '../Stories/Stories';
+import "./Feed.css";
 
 
 const Feed = () => {

@@ -19,6 +19,15 @@ nav ul {
     margin-bottom: 30px;
   }
 
+  .leftside-bar {
+    font-size: 20px;
+    position: fixed;
+    width: 281px; 
+    top: 100px;
+    left: 0;
+    height: 100vh; /* Full viewport height */
+  }
+
  .leftside-bar a {
     color: black; /* Set link color to black */
     text-decoration: none; /* Remove underline from links */
